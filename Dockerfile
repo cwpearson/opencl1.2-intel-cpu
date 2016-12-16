@@ -22,4 +22,4 @@ RUN mkdir -p /etc/OpenCL/vendors/ \
     && echo "/opt/intel/opencl-1.2-6.4.0.25/lib64/libintelocl.so" > /etc/OpenCL/vendors/intel.icd
 
 # Let the system know where the OpenCL library can be found at load time.
-ENV LD_LIBRARY_PATH /opt/intel/opencl-1.2-6.4.0.25/lib64
+ENV LD_LIBRARY_PATH /opt/intel/opencl-1.2-6.4.0.25/lib64:$LD_LIBRARY_PATH
