@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install opencv, OpenCL 1.2 headers, and other things needed to build OpenCL code
-RUN apt-get update -qq && apt-get install --no-install-recommends -yqq alien wget opencl-headers \
+RUN apt-get update -qq && apt-get install --no-install-recommends -yqq alien wget opencl-headers clinfo \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
